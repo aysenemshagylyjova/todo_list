@@ -5,12 +5,14 @@ let DIV = document.getElementById("div_1");
 ADD.addEventListener("click", function(){
     if (INPUT.value !== "") {
     let element = document.createElement("div");
-    let newvalue = document.createElement('span');
+    let newvalue = document.createElement('div');
     newvalue.innerText = INPUT.value;
+    newvalue.classList.add("col-10");
     element.classList.add("border_2");
     element.classList.add("col-8");
     element.classList.add("fs-5");
     element.classList.add("user-select-none");
+    element.classList.add("position-relative");
     // element.innerText = INPUT.value;
     element.appendChild(newvalue);
     DIV.appendChild(element);
@@ -27,6 +29,7 @@ ADD.addEventListener("click", function(){
     let newTexts = document.createTextNode('Edit');
     newEle.classList.add("text-success");
     newEle.classList.add("ms-5");
+    newEle.classList.add("p-a");
     newEle.appendChild(newTexts);
     element.appendChild(newEle);
 
@@ -39,6 +42,7 @@ ADD.addEventListener("click", function(){
     let newText = document.createTextNode('Delete');
     newEl.classList.add("text-danger");
     newEl.classList.add("ms-5");
+    newEl.classList.add("p-a1");
     newEl.appendChild(newText);
     element.appendChild(newEl);
 
